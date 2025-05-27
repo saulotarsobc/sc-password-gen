@@ -12,14 +12,20 @@ let win: BrowserWindow;
 async function createWindow() {
   win = new BrowserWindow({
     title: `SC - Password Gen - v0.0.1`,
-    width: 1024,
-    height: 768,
+    width: 480,
+    minWidth: 480,
+    maxWidth: 480,
+    height: 600,
+    minHeight: 600,
+    maxHeight: 600,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
       preload: join(__dirname, "preload.js"),
     },
   });
+
+  win.setMenu(null);
 
   if (app.isPackaged) {
     win.loadFile(join(__dirname, "..", "..", "dist", "frontend", "index.html"));
@@ -31,7 +37,7 @@ async function createWindow() {
   win.webContents.setWindowOpenHandler(({ url }) => {
     if (url.startsWith('https:')) shell.openExternal(url)
     return { action: 'deny' }
-  })
+  });
 
   app.on("window-all-closed", () => {
     if (process.platform !== "darwin") app.quit();
