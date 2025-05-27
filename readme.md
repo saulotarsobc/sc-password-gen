@@ -1,6 +1,6 @@
-# Electron APP and Vite
+# SC - Password Gen
 
-> Electron APP and Vite
+> A safe passworf generator
 
 ---
 
