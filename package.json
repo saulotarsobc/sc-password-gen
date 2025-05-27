@@ -1,0 +1,65 @@
+{
+  "name": "sc-password-gen",
+  "displayName": "SC - Password Gen",
+  "description": "Electron with Vite boilerplate",
+  "private": false,
+  "version": "0.0.1",
+  "author": {
+    "name": "Saulo Costa"
+  },
+  "main": "dist/backend/main.js",
+  "scripts": {
+    "dev": "yarn electron:build && tsx scripts/dev.ts",
+    "vite:dev": "vite",
+    "vite:build": "tsc && vite build",
+    "preview": "vite preview",
+    "electron:build": "tsc -p electron",
+    "build:all": "yarn electron:build && yarn vite:build",
+    "postinstall": "electron-builder install-app-deps",
+    "update:readme": "tsx scripts/update-readme.js",
+    "dist": "yarn build:all && electron-builder"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.5.0",
+    "electron": "^36.3.1",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9.27.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.2.0",
+    "tsx": "^4.19.4",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.32.1",
+    "vite": "^6.3.5"
+  },
+  "keywords": [
+    "electron",
+    "vite",
+    "react",
+    "electron-builder"
+  ],
+  "browserslist": [
+    "Electron >= 36"
+  ],
+  "engines": {
+    "node": "^22.16.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saulotarsobc/sc-password-gen"
+  }
+}
