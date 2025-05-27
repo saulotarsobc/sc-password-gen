@@ -1,7 +1,7 @@
 {
   "name": "sc-password-gen",
   "displayName": "SC - Password Gen",
-  "description": "Electron with Vite boilerplate",
+  "description": "Password Generator",
   "private": false,
   "version": "0.0.1",
   "author": {
