@@ -1,6 +1,6 @@
 # SC - Password Gen
 
-> A safe passworf generator
+> A safe password generator
 
 ---
 
