@@ -1,9 +1,5 @@
-import { contextBridge, ipcRenderer } from "electron";
+import { contextBridge } from "electron";
 
-export const api = {
-    sayHello: () => {
-        ipcRenderer.send('say-hello');
-    }
-};
+export const api = {};
 
 contextBridge.exposeInMainWorld("api", api);

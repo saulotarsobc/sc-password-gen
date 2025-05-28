@@ -1,6 +1,5 @@
-import { app, BrowserWindow, ipcMain, IpcMainEvent, shell } from "electron";
+import { app, BrowserWindow, shell } from "electron";
 import { join } from "node:path";
-
 
 if (!app.requestSingleInstanceLock()) {
   app.quit();
@@ -61,9 +60,3 @@ async function createWindow() {
 }
 
 app.whenReady().then(createWindow);
-
-ipcMain.on("say-hello", (event: IpcMainEvent) => {
-  console.log("Hello from main process");
-  console.log(event);
-});
-
