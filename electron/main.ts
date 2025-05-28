@@ -12,9 +12,9 @@ let win: BrowserWindow;
 async function createWindow() {
   win = new BrowserWindow({
     title: `SC - Password Gen - v0.0.1`,
-    width: 480,
-    minWidth: 480,
-    maxWidth: 480,
+    width: 400,
+    minWidth: 400,
+    maxWidth: 400,
     height: 600,
     minHeight: 600,
     maxHeight: 600,
