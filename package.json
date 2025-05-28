@@ -61,5 +61,33 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/saulotarsobc/sc-password-gen"
+  },
+  "build": {
+    "appId": "br.com.gen.password.sc",
+    "productName": "SC - Password Gen",
+    "files": [
+      "dist"
+    ],
+    "directories": {
+      "output": "out"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "artifactName": "${name}-${version}-windows-${arch}.${ext}"
+    },
+    "mac": {
+      "target": "dmg",
+      "signIgnore": null,
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "artifactName": "${name}-${version}-linux-${arch}.${ext}"
+    }
   }
 }
